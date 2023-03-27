@@ -47,3 +47,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+h1,
+h2 {
+    font-family: 'Roboto-Bold';
+}
+
+h4,
+h3,
+a {
+    font-family: 'Roboto-Medium';
+}
+
+input {
+    font-family: 'Roboto-Regular';
+}
