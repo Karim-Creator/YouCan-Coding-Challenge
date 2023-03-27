@@ -1,3 +1,49 @@
+/* ******************* TAILWIND SETUP ******************* */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ******************* ROBOTO FONT ******************* */
+
+
+/* BOLD FONT */
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+
+/* MEDIUM FONT */
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../assets/fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+
+/* REGULAR FONT */
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+
+/* ******************* GLOBAL STYLES ******************* */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
