@@ -19,7 +19,7 @@
             <div class="w-full flex items-center">
 
                 <!-- Company Logo -->
-                <img src="https://iconape.com/wp-content/png_logo_vector/tailwind-css-logo.png" class="h-14 w-14 object-center object-contain mr-12" alt="tailwind-logo">
+                <img src="https://iconape.com/wp-content/png_logo_vector/tailwind-css-logo.png" class="h-14 w-14 object-center object-contain mr-12" alt="tailwind-logo" loading="lazy">
 
 
                 <!-- Navigation Links -->
@@ -215,11 +215,42 @@
         </div>
     </div>
 
+    <!-- Table Section -->
     <section class="px-6">
-        <table class="table-auto w-full">
+        <table class="w-full">
             <!-- Looping Over Data (Check index.js) -->
             <tbody class="table-body w-full"></tbody>
         </table>
+
+        <!-- Table Pagination -->
+        <nav class="flex items-center justify-between">
+
+            <!-- Previous Button -->
+            <button class="flex items-center text-grey p-3 rounded-md transition-colors duration-500 ease-in-out hover:bg-grey/10" aria-label="previous-button"> 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 mr-3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>                  
+                <span class="text-dark/60">Previous</span>
+            </button>
+
+            <!-- Page Number -->
+            <div class="flex gap-2">
+                <button class="p-3 text-dark/60 transition-colors duration-500 ease-in-out hover:bg-primary/10">1</button>
+                <button class="p-3 text-primary border-t-2 border-primary">2</button>
+                <button class="p-3 text-dark/60 transition-colors duration-500 ease-in-out hover:bg-primary/10">3</button>
+                <button class="p-3 text-dark/60 transition-colors duration-500 ease-in-out hover:bg-primary/10">4</button>
+                <button class="p-3 text-dark/60 transition-colors duration-500 ease-in-out hover:bg-primary/10">5</button>
+                <button class="p-3 text-dark/60 transition-colors duration-500 ease-in-out hover:bg-primary/10">6</button>
+            </div>
+
+            <!-- Next Button -->
+            <button class="flex items-center text-grey p-3 rounded-md transition-colors duration-500 ease-in-out hover:bg-grey/10" aria-label="next-button"> 
+            <span class="text-dark/60">Next</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 ml-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>                                 
+        </button>
+        </nav>
     </section>
     <script src="bundle.js"></script>
 </body>

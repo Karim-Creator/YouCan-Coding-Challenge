@@ -19,9 +19,21 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.css$/i,
-            include: path.resolve(__dirname, 'src'),
-            use: ['style-loader', 'css-loader', 'postcss-loader'],
-        }, ],
+                test: /\.css$/i,
+                include: path.resolve(__dirname, 'src'),
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
+            },
+            {
+                test: /\.(png|jpg|gif|json|xml|ico|svg)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'assets/',
+                        publicPath: '/'
+                    }
+                }]
+            }
+        ],
     },
 }

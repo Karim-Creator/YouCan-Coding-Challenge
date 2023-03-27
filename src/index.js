@@ -1,64 +1,78 @@
 import './style.css';
+import '../assets/images/emily.jpg';
+import '../assets/images/anna.jpg';
+import '../assets/images/michael.jpg';
+import '../assets/images/emma.jpg';
+import '../assets/images/leo.jpg';
+import '../assets/images/floyd.jpg';
+import '../assets/images/ben.jpg';
+import '../assets/images/henry.jpg';
+import '../assets/images/hunter.jpg';
+import '../assets/images/bell.jpg';
 
+
+// Table Data
 const tableData = [{
-        userImage: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        userImage: '/assets/emily.jpg',
         userName: 'Emily Selman',
         userEmail: 'emilyselman@example.com',
     },
     {
-        userImage: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80',
+        userImage: '/assets/michael.jpg',
         userName: 'Michael Foster',
         userEmail: 'michaelfoster@example.com',
     },
     {
-        userImage: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80',
+        userImage: '/assets/emma.jpg',
         userName: 'Emma Dorsey',
         userEmail: 'emmadorsey@example.com',
     },
     {
-        userImage: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
+        userImage: '/assets/anna.jpg',
         userName: 'Anna Roberts',
         userEmail: 'annaroberts@example.com',
     },
     {
-        userImage: 'https://flowbite.com/docs/images/people/profile-picture-2.jpg',
+        userImage: '/assets/leo.jpg',
         userName: 'Leonard Krasner',
         userEmail: 'leonardkrasner@example.com',
     },
     {
-        userImage: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
+        userImage: '/assets/floyd.jpg',
         userName: 'Floyd Miles',
         userEmail: 'floydmiles@example.com',
     },
     {
-        userImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsEuD77HAz0crbrHoTfh0KkdM4k6Niz8uqhA&usqp=CAU',
+        userImage: '/assets/ben.jpg',
         userName: 'Benjamin Russel',
         userEmail: 'benjaminrussel@example.com',
     },
     {
-        userImage: 'https://v1.tailwindcss.com/_next/static/media/erin-lindford.4804b52007ca82ebe9999d19c717b44d.jpg',
+        userImage: '/assets/henry.jpg',
         userName: 'Courtney Henry',
         userEmail: 'courtneyhenry@example.com',
     },
     {
-        userImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8ny3nNZpGzRoqbqZvx6e6uFHnPitSRGXxW7S2YKNcrbxmuxIs-QPqcQBiPXH6zPOHt4&usqp=CAU',
+        userImage: '/assets/hunter.jpg',
         userName: 'Lawrence Hunter',
         userEmail: 'lawrencehunter@example.com',
     },
     {
-        userImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpypTHVCHahX7WPIYHb_VqDwNVHiI5tzldKFJbeR8kqLmC6lAYRHjvA0f-N8KlQvI4kiQ&usqp=CAU',
+        userImage: '/assets/bell.jpg',
         userName: 'Alicia Bell',
         userEmail: 'aliciabell@example.com',
     },
 ];
 
+
+// Looping over table data and display it
 tableData.forEach(function(data) {
     const tableHtml = `
     <tr class="flex items-center justify-between w-full border-b border-grey/20 pb-6 mt-6">
         <!-- Avatar - Name - Email -->
         <td class="w-full flex items-center gap-2">
             <!-- Avatar Image -->
-            <img class="w-12 h-12 object-center object-cover rounded-full mr-2" src="${data.userImage}" alt="avatar-image">
+            <img class="w-20 h-20 object-center object-cover rounded-full mr-2" src="${data.userImage}" alt="${data.userName}" loading="lazy">
 
             <div>
                 <!-- Name -->
@@ -95,7 +109,7 @@ tableData.forEach(function(data) {
 
         <!-- More Informations Button -->
         <td>
-            <button class="text-grey p-2 transition-colors ease-in-out duration-500 rounded-full hover:bg-grey/20">
+            <button class="text-grey p-2 transition-colors ease-in-out duration-500 rounded-full hover:bg-grey/20" aria-label="more-info-button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
@@ -104,5 +118,5 @@ tableData.forEach(function(data) {
         </td>
     </tr>
     `;
-    document.querySelector('.table-body').insertAdjacentHTML('afterbegin', tableHtml)
+    document.querySelector('.table-body').insertAdjacentHTML('beforebegin', tableHtml)
 })
