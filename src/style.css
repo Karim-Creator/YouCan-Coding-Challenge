@@ -59,6 +59,8 @@ a {
     font-family: 'Roboto-Medium';
 }
 
+p,
+span,
 input {
     font-family: 'Roboto-Regular';
 }
