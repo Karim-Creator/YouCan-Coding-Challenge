@@ -55,12 +55,13 @@ h2 {
 
 h4,
 h3,
-a {
+a,
+button,
+span {
     font-family: 'Roboto-Medium';
 }
 
 p,
-span,
 input {
     font-family: 'Roboto-Regular';
 }
