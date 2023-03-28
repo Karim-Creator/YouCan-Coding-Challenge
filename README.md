@@ -1,24 +1,39 @@
-************************** WELCOME ************************** 
+# YouCan-Coding-Challenge
 
 The project was made using : HTML - CSS / TAILWIND CSS - JAVASCRIPT.
 
 By following this guide, you will be able to run the project.
 
-************************** SETUP **************************
-// Clone the project 
-1- git clone https://github.com/Karim-Creator/YouCan-Coding-Challenge.git 'folder_name'
+## SETUP
 
-// Make sure you are in the right directory
-2- cd 'folder_name'
+1- Clone the project 
 
-// Install all dependencies.
-3- 'npm i'
+```bash
+  git clone https://github.com/Karim-Creator/YouCan-Coding-Challenge.git 'folder_name'
+```
 
-// Run the WebPack server, check out 'package.json' for more infos.
-4- 'npm run dev'
+2- Make sure you are in the right directory
 
-And with that, the project should be running.
+```bash
+  cd 'folder_name'
+```
 
-************************** OPTIONAL **************************
-Use 'npm run build', to build the project.
+3- Install all dependencies
 
+```bash
+  npm install
+```
+
+4- Run the WebPack server
+
+```bash
+    npm run dev
+```
+
+## OPTIONAL
+
+Build the project.
+
+```bash
+    npm run build
+```
